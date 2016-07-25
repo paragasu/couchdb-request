@@ -2,6 +2,8 @@
 Minimalist couchdb client on top of request.
 Unlike other couchdb-client, this module expose the powerful request object to enable chaining. 
 This make it easy to use it as a proxy between client (browser) and couchDB server. 
+
+
 This in turn allows us to do additional action like sending email confirmation after user successfully register or add additional check at the login form to rate limit login attempt.
 
 
