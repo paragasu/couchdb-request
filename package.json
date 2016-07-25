@@ -1,6 +1,6 @@
 {
   "name": "couchdb-request",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Minimilist couchdb client on top of request.",
   "main": "index.js",
   "repository": "https://github.com/paragasu/couchdb-request.git",
