@@ -32,26 +32,26 @@ Get database value
 ### put(id, data, [callback])
 Insert data to database
 - id document id
-- data object data to save
+- data *(json)* object data to save
 - callback *(optional)* function to execute after request complete
 
 ### post(id, data, [callback])
 Insert data to database
 - id document id
-- data object data to save
+- data *(json)* object data to save
 - callback *(optional)* function to execute after request complete
 
 
 ### del(id, [cb])
 Delete data from database
 - id document id
-- data object to save 
+- data *(json)* object to save 
 - callback *(optional)* function to execute after request complete
 
 ### save(id, data, [cb])
 Update existing data 
 - id document id
-- data object to save
+- data *(json)* object to save
 - callback *(optional)* function to execute after request complete
 
 
