@@ -12,24 +12,24 @@ couchDB server.
 
 ##Usage example
 ```javascript
-    const bodyParser = require('body-parser');
-    const express    = require('express');
-    const couchdb    = require('couchdb-request')('https://admin:password@localhost:5984');
+const bodyParser = require('body-parser');
+const express    = require('express');
+const couchdb    = require('couchdb-request')('https://admin:password@localhost:5984');
     
-    var app = express();
-    app.use(bodyParser.json());
+var app = express();
+app.use(bodyParser.json());
 
-    app.post('/register', (req, res) => {
+app.post('/register', (req, res) => {
     
-      couchdb
-      .database('_users')
-      .put('org.couchdb.user:' + req.body.email, req.body)
-      .on('error', err => console.log(err))
-      .on('response', result => sendEmailConfirmation(req.body))
-      .pipe(res)
+  couchdb
+  .database('_users')
+  .put('org.couchdb.user:' + req.body.email, req.body)
+  .on('error', err => console.log(err))
+  .on('response', result => sendEmailConfirmation(req.body))
+  .pipe(res)
       
-    })
+})
 
-    app.listen(3000);
+app.listen(3000);
 ```
 
