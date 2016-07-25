@@ -19,11 +19,22 @@ var couchdb = module.exports = function (url){
   }
 }
 
+
+/**
+ * configure which database to query to
+ * @param string database
+ */
 function database(database){
   db = database;
   return couchdb(host);
 }
 
+
+/**
+ * get the document info
+ * @param id document id
+ * @param callback optional callback function to execute after request complete
+ */
 function get(id, cb){
   return request({
     json: true,
@@ -31,7 +42,13 @@ function get(id, cb){
   }, cb)
 }
 
-function put(id, data, cb){
+
+/**
+ * create new document and autogenerate doc id
+ * @param json object data
+ * @param optional callback function
+ */
+function put(data, cb){
   return request({ 
     method: 'PUT',
     json: true,
@@ -40,6 +57,13 @@ function put(id, data, cb){
   }, cb)
 }
 
+
+/**
+ * update document specified by doc id
+ * @param id document id
+ * @param data json object
+ * @param cb optional callback function
+ */
 function post(id, data, cb){
   return request({
     json: true,
@@ -49,6 +73,12 @@ function post(id, data, cb){
   }, cb)
 }
 
+
+/**
+ * delete document
+ * @param id document id
+ * @param cb optional callback function
+ */
 function del(id, cb){
   get(id, (err, res) => {
     if(err) throw(err);
@@ -62,6 +92,13 @@ function del(id, cb){
 }
 
 
+/**
+ * save document
+ * automatically find out the latest revision
+ * @param id document id
+ * @param data json object
+ * @param cb optional callback function
+ */
 function save(id, data, cb){
   get(id, (err, res)=>{
     if(res) data._rev = res.body._rev;
@@ -73,9 +110,8 @@ function save(id, data, cb){
 /**
  * query couchdb view. the key must be of type string and double quoted (")
  * @param design design name path
- * @param opts is assume to be key if string
- *        if object then assume the option as in 
- *        http://docs.couchdb.org/en/1.6.1/api/ddoc/views.html
+ * @param opts assume option is in http://docs.couchdb.org/en/1.6.1/api/ddoc/views.html
+ *             or key if string provided
  * @param cb callback
  */
 function view(design, opts, cb){
