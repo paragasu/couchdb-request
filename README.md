@@ -24,32 +24,32 @@ before calling any database action method.
 - url full url sytax eg: https://admin:password@localhost:5984
 
 
-### get(id, [callback])
+#### get(id, [callback])
 Get database value
 - id document id
 - callback *(optional)* function to execute after request complete
 
 
-### put(id, data, [callback])
+#### put(id, data, [callback])
 Insert data to database
 - id document id
 - data *(json)* object data to save
 - callback *(optional)* function to execute after request complete
 
-### post(id, data, [callback])
+#### post(id, data, [callback])
 Insert data to database
 - id document id
 - data *(json)* object data to save
 - callback *(optional)* function to execute after request complete
 
 
-### del(id, [cb])
+#### del(id, [cb])
 Delete data from database
 - id document id
 - data *(json)* object to save 
 - callback *(optional)* function to execute after request complete
 
-### save(id, data, [cb])
+#### save(id, data, [cb])
 Update existing data. This api will automatically get the latest rev to use for updating the data.
 - id document id
 - data *(json)* object to save
