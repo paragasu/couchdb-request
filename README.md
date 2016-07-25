@@ -1,6 +1,6 @@
 # couchdb-request
 
-[![Build Status](https://secure.travis-ci.org/node-nock/nock.svg?branch=master)](http://travis-ci.org/node-nock/nock?branch=master)
+[![Build Status](https://travis-ci.org/paragasu/couchdb-request.svg?branch=master)](https://travis-ci.org/paragasu/couchdb-request)
 
 Minimalist couchdb client on top of request.
 Unlike other couchdb-client, this module expose the powerful request object to enable chaining. 
