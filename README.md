@@ -7,7 +7,10 @@ couchDB server.
 
 ##Install
 
-  $npm install couchdb-request
+    $npm install couchdb-request
+
+
+##Usage example
 
 
 
