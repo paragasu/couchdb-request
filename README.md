@@ -50,17 +50,17 @@ Insert data to database
 - callback *(optional)* function to execute after request complete
 
 
-#### del(id, [cb])
+#### del(id, callback)
 Delete data from database
 - id document id
 - data *(json)* object to save 
-- callback *(optional)* function to execute after request complete
+- callback function to execute after request complete
 
-#### save(id, data, [cb])
+#### save(id, data, callback)
 Update existing data. This api will automatically get the latest rev to use for updating the data.
 - id document id
 - data *(json)* object to save
-- callback *(optional)* function to execute after request complete
+- callback function to execute after request complete
 
 
 #### view(design, opts, [callback])
