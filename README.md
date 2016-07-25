@@ -68,11 +68,11 @@ app.use(bodyParser.json());
 
 app.post('/register', (req, res) => {
   couchdb
-  .database('_users')
-  .put('org.couchdb.user:' + req.body.email, req.body)
-  .on('error', err => console.log(err))
+  .database('_users') //select database
+  .put('org.couchdb.user:' + req.body.email, req.body) //method
+  .on('error', err => console.log(err)) //log on error
   .on('response', result => sendEmailConfirmation(req.body)) //send email on success
-  .pipe(res)
+  .pipe(res) //stream to browser
       
 })
 
