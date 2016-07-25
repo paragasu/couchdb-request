@@ -1,4 +1,7 @@
 # couchdb-request
+
+[![Build Status](https://secure.travis-ci.org/node-nock/nock.svg?branch=master)](http://travis-ci.org/node-nock/nock?branch=master)
+
 Minimalist couchdb client on top of request.
 Unlike other couchdb-client, this module expose the powerful request object to enable chaining. 
 This make it easy to use it as a proxy between client (browser) and couchDB server. 
