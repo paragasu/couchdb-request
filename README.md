@@ -11,7 +11,7 @@ couchDB server.
 
 
 ##Usage example
-
+```javascript
     const bodyParser = require('body-parser');
     const express    = require('express');
     const couchdb    = require('couchdb-request')('https://admin:password@localhost:5984');
@@ -31,4 +31,5 @@ couchDB server.
     })
 
     app.listen(3000);
+```
 
