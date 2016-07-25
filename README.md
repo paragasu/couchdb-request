@@ -56,6 +56,11 @@ Update existing data. This api will automatically get the latest rev to use for 
 - callback *(optional)* function to execute after request complete
 
 
+#### view(design, opts, [callback])
+Query rows of data using views
+- id view id
+- opts *(json)* options parameter as [documented here](http://docs.couchdb.org/en/1.6.1/api/ddoc/views.html)
+- callback *(optional)* function to execute after request complete
 
 ##Usage example
 ```javascript

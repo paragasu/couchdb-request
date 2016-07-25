@@ -80,9 +80,9 @@ function save(id, data, cb){
  */
 function view(design, opts, cb){
   const qs = require('querystring');
-  let v    = design.split('/'), _db = v[0], viewName=v[1];
+  let v    = design.split('/'), designName = v[0], viewName=v[1];
   let u    = (typeof opts === "object") ? qs.stringify(opts) : 'key="' + opts + '"';
-  let url  = [host, db, '_design', _db, '_view', viewName, '?' + u];
+  let url  = [host, db, '_design', designName, '_view', viewName, '?' + u];
   return request({
     json: true,
     url: url.join('/')
