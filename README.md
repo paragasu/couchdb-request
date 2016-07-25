@@ -20,10 +20,15 @@ return the same request object. All method from [request](https://www.npmjs.com/
 Please refer the CouchDB API documentation at [docs.couchdb.org](http://docs.couchdb.org/en/1.6.1/http-api.html) for available
 REST API.
 
-#### database(url)
+#### configuration
 This api should be called first to set the correct database parameter
 before calling any database action method.
 - url full url sytax eg: https://admin:password@localhost:5984
+
+
+#### database(url)
+Database name to query to
+- database name eg: booking
 
 
 #### get(id, [callback])
