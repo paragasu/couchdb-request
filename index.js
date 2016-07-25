@@ -45,10 +45,11 @@ function get(id, cb){
 
 /**
  * create new document and autogenerate doc id
+ * @param id document id
  * @param json object data
  * @param optional callback function
  */
-function put(data, cb){
+function put(id, data, cb){
   return request({ 
     method: 'PUT',
     json: true,
