@@ -101,3 +101,11 @@ couchdb
   console.log(res);
 })
 ```
+
+
+
+## Reference
+- [CouchDB API](http://docs.couchdb.org/en/1.6.1/http-api.html)
+- [CouchDB View Options](http://docs.couchdb.org/en/1.6.1/api/ddoc/views.html)
+- [Request documentation](https://github.com/request/request)
+
