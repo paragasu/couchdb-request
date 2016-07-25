@@ -1,0 +1,17 @@
+{
+  "name": "couchdb-request",
+  "version": "1.0.0",
+  "description": "Minimilist couchdb client on top of request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "couchdb",
+    "request",
+    "couchdb",
+    "client"
+  ],
+  "author": "Jeffry L.",
+  "license": "MIT"
+}
