@@ -10,11 +10,11 @@ var couchdb = module.exports = function (url){
 
   return {
     database: database,
-    get: get,
-    put: put,
+    get : get,
+    put : put,
     post: post,
     view: view,
-    del: del,
+    del : del,
     save: save
   }
 }
