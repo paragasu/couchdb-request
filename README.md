@@ -10,12 +10,13 @@ This in turn allows us to do additional action like sending email confirmation a
     $npm install couchdb-request
 
 
-
 ##Method
 
 ### API
-All method is basically a very light [request](http://https://www.npmjs.com/package/request) abstraction and every call will
-return the same request object. All method from request module is available.
+All method is basically a very light [request](https://www.npmjs.com/package/request) abstraction and every call will
+return the same request object. All method from [request](https://www.npmjs.com/package/request) module is available.
+Please refer the CouchDB API documentation at [docs.couchdb.org](http://docs.couchdb.org/en/1.6.1/http-api.html) for available
+REST API.
 
 #### database(url)
 This api should be called first to set the correct database parameter
@@ -49,7 +50,7 @@ Delete data from database
 - callback *(optional)* function to execute after request complete
 
 ### save(id, data, [cb])
-Update existing data 
+Update existing data. This api will automatically get the latest rev to use for updating the data.
 - id document id
 - data *(json)* object to save
 - callback *(optional)* function to execute after request complete
