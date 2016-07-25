@@ -91,3 +91,13 @@ app.post('/register', (req, res) => {
 app.listen(3000);
 ```
 
+
+Using callback function
+
+```javascript
+couchdb
+.database('_users')
+.get('org.couchdb.user:myuser@hello.com', res => {
+  console.log(res);
+})
+```
