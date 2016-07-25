@@ -78,10 +78,11 @@ function post(id, data, cb){
 /**
  * delete document
  * @param id document id
- * @param cb optional callback function
+ * @param cb callback function
  */
 function del(id, cb){
   get(id, (err, res) => {
+    console.log(err);
     if(err) throw(err);
     let req = [host, db, id, '?rev=' + res.body._rev].join('/');
     request({
@@ -98,7 +99,7 @@ function del(id, cb){
  * automatically find out the latest revision
  * @param id document id
  * @param data json object
- * @param cb optional callback function
+ * @param cb callback function
  */
 function save(id, data, cb){
   get(id, (err, res)=>{

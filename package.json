@@ -14,5 +14,12 @@
     "client"
   ],
   "author": "Jeffry L.",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "nock": "^8.0.0",
+    "tape": "^4.6.0"
+  }
 }
