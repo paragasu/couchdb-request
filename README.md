@@ -24,9 +24,12 @@ Please refer the CouchDB API documentation at [docs.couchdb.org](http://docs.cou
 REST API.
 
 #### configuration
+```javascript
+const couchdb = require('couchdb-request')(opts)
+```
 This api should be called first to set the correct database parameter
 before calling any database action method.
-- url full url sytax eg: https://admin:password@localhost:5984
+- opts full url sytax eg: https://admin:password@localhost:5984
 
 
 #### database(url)
